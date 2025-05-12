@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+int sum(const int numbers[], int sizee)
+{
+    int s=0;
+    for(unsigned i{}; i<sizee; i++)
+        {
+            s+=numbers[i];
+        }
+    return s;
+}
+
+int main()
+{
+    int n;
+    cout<<"Enter the number of array elements: "; cin>>n;
+    int* arr = new int[n];   //супер метода из прошлой темы
+    for(unsigned i{};i<n;i++)
+        {
+            cout<<"Enter["<<i+1<<"] elem: "; cin>>arr[i];
+        }
+     cout<<"Total sum: "<<sum(arr,n);
+
+    delete[] arr;
+    return 0;
+}
