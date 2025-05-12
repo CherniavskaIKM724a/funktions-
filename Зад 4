@@ -1,0 +1,21 @@
+include <iostream>
+#include <cmath>
+using namespace std;
+
+void simplor(int a)
+{
+    if(a<2) {cout<<"Not Prime"; return;}
+    for(unsigned i{2}; i <= sqrt(a); i++)   //удобная метода, чтобы меньше перебирать
+    {
+        if(a%i==0){cout<<"Not Prime"; return;}
+    }
+    cout<<"Prime";
+}
+int main()
+{
+    int n;
+    cout<<"Enter int number >=0 : ";cin>>n;
+    simplor(n);
+
+    return 0;
+}
