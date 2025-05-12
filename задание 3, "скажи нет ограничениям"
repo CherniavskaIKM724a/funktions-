@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+
+int longi(const string& strun) {  //передаём по ссылке чтобы избежать копирования
+    return strun.size();
+}
+
+int main() {
+    string str;
+    cout << "Enter something: ";
+    getline(cin,str);   //первый параметр откуда идёт поток ввода, второй куда записываем
+    cout << "Length: " << longi(str) << endl;    //не ставим амперсанд, ибо если поставим, то передадим адрес
+    return 0;
+}
