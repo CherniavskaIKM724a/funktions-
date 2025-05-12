@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+string revers(string strun) {
+    int n = 0;
+    for (char c : strun) {
+        n++;
+    }
+    for(unsigned i{}; i<n/2; i++)
+        {
+            char temp = strun[i];
+            strun[i] = strun[n-i-1];
+            strun[n-i-1]= temp;
+        }
+    return strun;
+}
+int main()
+{
+    string str;
+    cout << "Enter something(!not Cyrillic + without spaces): ";
+    cin >> str;
+    cout << "Reverse: "<<revers(str);
+    return 0;
+}
