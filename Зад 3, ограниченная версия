@@ -1,0 +1,18 @@
+№include <iostream>
+using namespace std;
+
+int longi(const string& strun) {  //передаём по ссылке чтобы избежать копирования
+    int count = 0;
+    for (char c : strun) {
+        count++;
+    }
+    return count;
+}
+
+int main() {
+    string str;
+    cout << "Enter something(!not Cyrillic + without spaces): ";
+    cin >> str;
+    cout << "Length: " << longi(str) << endl;    //не ставим амперсанд, ибо если поставим, то передадим адрес
+    return 0;
+}
