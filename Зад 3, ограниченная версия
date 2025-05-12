@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 int longi(const string& strun) {  //передаём по ссылке чтобы избежать копирования
     int count = 0;
     for (char c : strun) {
