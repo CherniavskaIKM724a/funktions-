@@ -1,0 +1,57 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int common(int a[], int b[], int size_1, int size_2, int numbers[])
+{
+    int size_3=0;
+    for(unsigned i{};i<size_1;i++)
+        {
+            for(unsigned j{};j<size_2;j++)
+                {
+                    if(a[i]==b[j]){
+                        bool test=true;
+                        for(unsigned p{};p<size_3;p++)
+                        {
+                            if(numbers[p]==a[i]){test=false;break;}
+                        }
+                        if(test==true){size_3++; numbers[size_3-1]=a[i]; break;}}
+                }
+        }
+    return size_3;
+}
+int main()
+{
+    srand(time(0));
+    int n,m,p;
+    cout<<"Enter size array 1 : "; cin>>n;
+    cout<<"Enter size array 2 : "; cin>>m;
+    if(n<1 || m<1){cout<<"enter number >0"; return 0;}
+    int *a{new int[n]};
+    int *b{new int[m]};
+    int *c{new int[n+m]};
+    cout<<"array 1: ";
+    for (unsigned i{};i<n;i++)
+    {
+        a[i]=rand()%11; cout<<a[i]<<" ";
+    }
+    cout<<endl<<"array 2: ";
+    for (unsigned i{};i<m;i++)
+    {
+        b[i]=rand()%11; cout<<b[i]<<" ";
+    }
+    cout<<"\n";
+    p=common(a,b,n,m,c);
+    if(p>0)
+    {
+        for (unsigned i{};i<p;i++)
+        {
+            cout<<c[i]<<" ";
+        }
+    }
+    delete[] a;
+    delete[] b;
+    delete[] c;
+    return 0;
+}
