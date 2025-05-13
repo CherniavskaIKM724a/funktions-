@@ -1,0 +1,15 @@
+#include <iostream>
+using namespace std;
+int sq(int const a, int const b)
+{
+    return a*b;
+}
+int main()
+{
+
+    int l1,l2;
+    cout<<"Enter the first side of the rectangle(=0): ";cin>>l1;
+    cout<<"Enter the second side of the rectangle(=0): ";cin>>l2;
+    cout<<"S = "<<sq(l1,l2);
+    return 0;
+}
