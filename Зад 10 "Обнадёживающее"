@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+void how_old(double a)
+{
+    if(a<0) {cout<<"in the project";return;}
+    else if(a<7){cout<<"preschooler";return;}
+    else if(a<18){cout<<"schoolboy/girl";return;}
+    else if(a<31){cout<<"young person";return;}
+    else if(a<56){cout<<"adult";return;}
+    else cout<<"an aged person";
+}
+int main()
+{
+    double age;
+    cout<<"Enter your age: "; cin>>age;
+    how_old(age);
+    return 0;
+}
