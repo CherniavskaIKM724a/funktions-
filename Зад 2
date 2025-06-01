@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-int factorial(int a)
+long long factorial(int a)
 {
     int res=1;
     for(unsigned i{1};i<=a;i++)
@@ -11,7 +11,7 @@ int factorial(int a)
 }
 int main()
 {
-    int n1;
+    long long n1;
     cout<<"Enter number(>=0): ";cin>>n1;
     cout<<"!"<<n1<< " = "<<factorial(n1);
     return 0;
